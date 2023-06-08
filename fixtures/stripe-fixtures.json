@@ -4,7 +4,7 @@
     },
     "fixtures": [
         {
-            "name": "prod_hobby",
+            "name": "prod_premium",
             "path": "/v1/products",
             "method": "post",
             "params": {
@@ -13,7 +13,7 @@
             }
         },
         {
-            "name": "price_hobby_month",
+            "name": "price_premium_month",
             "path": "/v1/prices",
             "method": "post",
             "params": {
@@ -28,7 +28,7 @@
             }
         },
         {
-            "name": "price_hobby_year",
+            "name": "price_premium_year",
             "path": "/v1/prices",
             "method": "post",
             "params": {
@@ -36,45 +36,6 @@
                 "currency": "usd",
                 "billing_scheme": "per_unit",
                 "unit_amount": 10000,
-                "recurring": {
-                    "interval": "year",
-                    "interval_count": 1
-                }
-            }
-        },
-        {
-            "name": "prod_freelancer",
-            "path": "/v1/products",
-            "method": "post",
-            "params": {
-                "name": "Freelancer",
-                "description": "Freelancer product description"
-            }
-        },
-        {
-            "name": "price_freelancer_month",
-            "path": "/v1/prices",
-            "method": "post",
-            "params": {
-                "product": "${prod_freelancer:id}",
-                "currency": "usd",
-                "billing_scheme": "per_unit",
-                "unit_amount": 2000,
-                "recurring": {
-                    "interval": "month",
-                    "interval_count": 1
-                }
-            }
-        },
-        {
-            "name": "price_freelancer_year",
-            "path": "/v1/prices",
-            "method": "post",
-            "params": {
-                "product": "${prod_freelancer:id}",
-                "currency": "usd",
-                "billing_scheme": "per_unit",
-                "unit_amount": 20000,
                 "recurring": {
                     "interval": "year",
                     "interval_count": 1
